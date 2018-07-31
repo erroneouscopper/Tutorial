@@ -2,13 +2,60 @@
  *
  *
  * Scope of a variable is whereabouts in your program source you can actually see that variable used by its simple name. 
- * So you know, for example, that sometimes you can just refer to x and other times, you'll refer to something dot x and 
- * you might have a class name in front of the dot or an object reference in front of the dot. If you have to use something 
+ * So you know, for example, that sometimes you can just refer to "x" and other times, you'll refer to something dot x (".x") 
+ * and you might have a class name in front of the dot or an object reference in front of the dot. If you have to use something 
  * in front of the dot then that's not considered in scope, but if you can use that variable directly by its own name, x, 
  * then it's in scope. Other times, the scope of the variable is restricted to just part of a method or even a very small 
  * part of the method. Sometimes it's much broader than that. Sometimes you can access a variable inside an entire class. 
  * Occasionally, even beyond that.
  *
  *
- *
  */
+ 
+ 
+ /*
+ Initially, the scope of a variable is usually defined by the limits of where it is declared through to the closing curly brace 
+ of the block that encloses it. Then inside the method, we will declare a variable at the top.
+ */
+
+
+public void scopeVar_Example1() {
+   int i;   //scope of 'i' starts here
+   double d;                               //scope of 'd' starts here
+   {    //this curly bracket represents beginning of a block. Using curly bracket like this is perfectly legal in java, but you wouldn't see it often.
+      float f;
+   }   //closing of a block
+}           //scope of 'i' ends here         //scope of 'd' ends here
+
+
+
+
+
+
+
+
+package scope;
+public class Scope {
+   private static int y = 99;
+   
+   public static void main(String[] args){
+      int x = y;
+      
+      {
+         int j = 100;
+         System.out.println("Value of j is " + j + " and x is " + x);
+         int d = 100;
+         x = d;
+      }
+   
+   }
+
+}
+
+
+
+
+
+
+
+
