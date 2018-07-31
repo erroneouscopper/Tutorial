@@ -1,1 +1,14 @@
 /**
+ *
+ *
+ * Scope of a variable is whereabouts in your program source you can actually see that variable used by its simple name. 
+ * So you know, for example, that sometimes you can just refer to x and other times, you'll refer to something dot x and 
+ * you might have a class name in front of the dot or an object reference in front of the dot. If you have to use something 
+ * in front of the dot then that's not considered in scope, but if you can use that variable directly by its own name, x, 
+ * then it's in scope. Other times, the scope of the variable is restricted to just part of a method or even a very small 
+ * part of the method. Sometimes it's much broader than that. Sometimes you can access a variable inside an entire class. 
+ * Occasionally, even beyond that.
+ *
+ *
+ *
+ */
