@@ -36,7 +36,7 @@ public void scopeVar_Example1() {
 
 package scope;
 public class Scope {
-   private static int y = 99;
+   private static int y = 99;             // scope of 'x' starts here
    
    public static void main(String[] args){
       int x = y;
